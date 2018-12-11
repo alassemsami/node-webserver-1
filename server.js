@@ -33,7 +33,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req,res) => {
 	res.render("home.hbs",{
-		title : "Home Page",
+		title : "Home ",
 		'name': 'Sami Alassem',
 		'hobbies' : {
 			'work':[
@@ -43,9 +43,13 @@ app.get('/', (req,res) => {
 	});
 });
 
+app.get('/portofolio', (req,res) => {
+	res.render("home.hbs",{ title : "Portofolio"});
+});
+
 app.get('/about', (req,res) => {
 	res.render("about.hbs", {
-		title: 'About Page'
+		title: 'About '
 	});
 });
 
